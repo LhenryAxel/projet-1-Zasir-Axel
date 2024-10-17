@@ -10,31 +10,31 @@ body {
     color: #ffffff;
 }
 
-/* Header and Logo */
-header {
+/* Header */
+.header-black {
     background-color: #0b0b0b;
-    padding: 20px 50px;
+    padding: 0px 30px; /* Reduced padding to make the header less wide */
 }
 
 nav {
     display: flex;
-    justify-content: space-between;  /* This ensures the items are on opposite ends */
+    justify-content: space-between; /* Logo on the left and nav-links on the right */
     align-items: center;
 }
 
 .logo {
-    order: 2; /* Move the logo to the right */
+    order: 1; /* Ensure the logo stays on the left */
 }
 
 .logo img {
-    width: 100px; /* Adjust logo size as needed */
+    width: 115px; /* Adjust logo size as needed */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
-    order: 1; /* Ensure the navigation stays on the left */
+    gap: 30px; /* Space between navigation items */
+    order: 2; /* Ensure the navigation stays on the right */
 }
 
 .nav-links li a {
@@ -44,10 +44,15 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #f5b30a; /* Highlight color on hover */
+    color: #f5b30a; /* Gold color on hover */
 }
 
-/* Dropdown menu styles */
+/* Highlight the active link in gold */
+.nav-links li a.active {
+    color: #f5b30a; /* Gold color for active page */
+}
+
+/* Dropdown Menu Styles */
 .dropdown-menu, .submenu-items {
     display: none;
     position: absolute;
@@ -58,15 +63,23 @@ nav {
     list-style: none;
     padding: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure the dropdown is above other content */
+}
+
+.dropdown-menu li a, .submenu-items li a {
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover, .submenu-items li a:hover {
+    background-color: #f5b30a; /* Highlight dropdown items on hover */
 }
 
 .dropdown:hover .dropdown-menu,
 .submenu:hover .submenu-items {
     display: block;
-}
-
-.dropdown-menu li a:hover, .submenu-items li a:hover {
-    background-color: #f5b30a;
 }
 
 /* Hero Section */
