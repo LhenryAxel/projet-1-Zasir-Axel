@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,89 +11,68 @@ body {
     color: #ffffff;
 }
 
-/* Header */
+/* Header Styling */
 .header-black {
     background-color: #0b0b0b;
-    padding: 0px 30px; /* Reduced padding to make the header less wide */
+    padding: 0 30px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between; /* Logo on the left and nav-links on the right */
-    align-items: center;
-}
-
-.logo {
-    order: 1; /* Ensure the logo stays on the left */
-}
-
+/* Logo Styling */
 .logo img {
-    width: 115px; /* Adjust logo size as needed */
+    width: 115px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Space between navigation items */
-    order: 2; /* Ensure the navigation stays on the right */
-}
-
-.nav-links li {
-    position: relative; /* Ensure the dropdown menus are positioned correctly */
-}
-
-.nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
+/* Navigation Links (NavBar) */
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* White text by default */
     font-weight: 500;
+    margin-right: 30px; /* Space between navigation items */
+    transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
-.nav-links li a:hover {
-    color: #f5b30a; /* Gold color on hover */
+/* Hover effect - turn link orange */
+.navbar-nav .nav-link:hover {
+    color: #f5b30a !important; /* Orange on hover */
 }
 
-/* Highlight the active link in gold */
-.nav-links li a.active {
-    color: #f5b30a; /* Gold color for active page */
+/* Active link - keep white, but add hover */
+.navbar-nav .nav-link.active {
+    color: #ffffff !important; /* White when active */
 }
 
-/* Dropdown Menu Styles */
-.dropdown-menu, .submenu-items {
-    display: none;
-    position: absolute;
-    background-color: #ffffff; /* White background for the dropdown */
-    color: #000; /* Default black text */
-    top: 100%;
-    left: 0;
-    list-style: none;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure the dropdown is above other content */
+/* Allow hover effect on active link */
+.navbar-nav .nav-link.active:hover {
+    color: #f5b30a !important; /* Turn orange on hover even when active */
 }
 
-.dropdown-menu li a, .submenu-items li a {
-    color: #000; /* Black text for dropdown items */
-    padding: 10px;
-    text-decoration: none;
-    display: block;
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #ffffff; /* White background for dropdown */
+    color: #000000; /* Black text inside dropdown */
 }
 
-.dropdown-menu li a:hover, .submenu-items li a:hover {
-    background-color: #f5b30a; /* Orange background on hover */
-    color: #000; /* Ensure the text stays black on hover */
+/* Dropdown Items */
+.dropdown-menu .dropdown-item {
+    color: #000000 !important; /* Ensure dropdown text is black */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-/* Show dropdown menu on hover */
-.nav-links li:hover > .dropdown-menu,
-.submenu:hover > .submenu-items {
-    display: block;
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f5b30a; /* Orange background when hovered */
+    color: #000000 !important; /* Black text on hover */
+}
+
+/* Dropdown Submenu (nested dropdown) */
+.dropdown-submenu {
+    position: relative;
 }
 
 /* Submenu positioning */
-.submenu-items {
+.dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 
 /* Hero Section */
@@ -102,7 +82,6 @@ nav {
     align-items: center;
     padding: 50px;
     background-color: #0b0b0b;
-    position: relative;
 }
 
 .hero-text h1 {
@@ -116,31 +95,36 @@ nav {
     margin: 20px 0;
 }
 
+/* Call-to-action button */
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
     background-color: #f5b30a;
-    color: #000;
+    color: #000000;
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
     margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
+/* Button hover effect */
 .cta-button:hover {
-    background-color: #d49508;
+    background-color: #d49508; /* Darker orange on hover */
 }
 
+/* Hero image styling */
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular image */
 }
 
 .hero-image {
     position: relative;
 }
 
+/* Hero image styling (decorative) */
 .hero-image::before {
     content: '';
     position: absolute;
@@ -153,7 +137,7 @@ nav {
     z-index: -1;
 }
 
-/* Responsive Hero Section */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -169,12 +153,12 @@ nav {
     }
 }
 
-/* Menu Page */
+/* Menu Page Styling */
 .menu-page {
     padding: 50px;
     text-align: center;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
 }
 
 .menu-page h1 {
@@ -182,12 +166,14 @@ nav {
     margin-bottom: 40px;
 }
 
+/* Menu items layout */
 .menu-items {
     display: flex;
     justify-content: center;
     gap: 50px;
 }
 
+/* Individual menu item */
 .menu-item {
     text-align: center;
 }
