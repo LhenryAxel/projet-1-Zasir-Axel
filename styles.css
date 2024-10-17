@@ -11,10 +11,16 @@ body {
     color: #ffffff;
 }
 
+/* Specific Styles for the Carte Page */
+body.carte-page {
+    background-color: #ffffff; /* White background for Carte page */
+    color: #000000; /* Black text for contrast on the Carte page */
+}
+
 /* Header Styling */
 .header-black {
     background-color: #0b0b0b;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 /* Logo Styling */
@@ -166,20 +172,42 @@ body {
     margin-bottom: 40px;
 }
 
-/* Menu items layout */
+.menu-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 45px;
+    margin-top: 30px;
+}
+
+.menu-icons .icon {
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-icons .icon img {
+    width: 80px;
+}
+
+.menu-icons .icon span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 .menu-items {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-/* Individual menu item */
 .menu-item {
     text-align: center;
 }
 
 .menu-item img {
-    width: 100px;
+    width: 150px;
     margin-bottom: 10px;
 }
 
@@ -189,13 +217,12 @@ body {
     font-weight: bold;
 }
 
-/* Entrées Section */
-.entrees-section {
-    margin-top: 50px;
-    text-align: left;
-}
-
-.entrees-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.price {
+    display: block;
+    margin-top: 5px;
+    background-color: #f5b30a;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
