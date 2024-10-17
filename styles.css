@@ -37,6 +37,10 @@ nav {
     order: 2; /* Ensure the navigation stays on the right */
 }
 
+.nav-links li {
+    position: relative; /* Ensure the dropdown menus are positioned correctly */
+}
+
 .nav-links li a {
     color: #ffffff;
     text-decoration: none;
@@ -56,8 +60,8 @@ nav {
 .dropdown-menu, .submenu-items {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    color: #000;
+    background-color: #ffffff; /* White background for the dropdown */
+    color: #000; /* Default black text */
     top: 100%;
     left: 0;
     list-style: none;
@@ -67,19 +71,28 @@ nav {
 }
 
 .dropdown-menu li a, .submenu-items li a {
-    color: #000;
+    color: #000; /* Black text for dropdown items */
     padding: 10px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-menu li a:hover, .submenu-items li a:hover {
-    background-color: #f5b30a; /* Highlight dropdown items on hover */
+    background-color: #f5b30a; /* Orange background on hover */
+    color: #000; /* Ensure the text stays black on hover */
 }
 
-.dropdown:hover .dropdown-menu,
-.submenu:hover .submenu-items {
+/* Show dropdown menu on hover */
+.nav-links li:hover > .dropdown-menu,
+.submenu:hover > .submenu-items {
     display: block;
+}
+
+/* Submenu positioning */
+.submenu-items {
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
 }
 
 /* Hero Section */
