@@ -10,21 +10,31 @@ body {
     color: #ffffff;
 }
 
+/* Header and Logo */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    align-items: center;
     background-color: #0b0b0b;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;  /* This ensures the items are on opposite ends */
+    align-items: center;
+}
+
+.logo {
+    order: 2; /* Move the logo to the right */
+}
+
+.logo img {
+    width: 100px; /* Adjust logo size as needed */
 }
 
 .nav-links {
     list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    margin: 0 15px;
+    display: flex;
+    gap: 20px;
+    order: 1; /* Ensure the navigation stays on the left */
 }
 
 .nav-links li a {
@@ -34,9 +44,32 @@ header {
 }
 
 .nav-links li a:hover {
-    color: #f5b30a;
+    color: #f5b30a; /* Highlight color on hover */
 }
 
+/* Dropdown menu styles */
+.dropdown-menu, .submenu-items {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    color: #000;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu,
+.submenu:hover .submenu-items {
+    display: block;
+}
+
+.dropdown-menu li a:hover, .submenu-items li a:hover {
+    background-color: #f5b30a;
+}
+
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -94,6 +127,7 @@ header {
     z-index: -1;
 }
 
+/* Responsive Hero Section */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -109,75 +143,12 @@ header {
     }
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    align-items: center;
-    background-color: #0b0b0b;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 80px;
-    margin-right: 10px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    position: relative;
-    margin: 0 20px;
-}
-
-.nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav-links li a:hover {
-    color: #f5b30a;
-}
-
-.dropdown-menu, .submenu-items {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    color: #000;
-    top: 100%;
-    left: 0;
-    list-style: none;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu li a, .submenu-items li a {
-    color: #000;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-menu li a:hover, .submenu-items li a:hover {
-    background-color: #f5b30a;
-}
-
-.dropdown:hover .dropdown-menu,
-.submenu:hover .submenu-items {
-    display: block;
-}
-
+/* Menu Page */
 .menu-page {
     padding: 50px;
     text-align: center;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .menu-page h1 {
@@ -206,6 +177,7 @@ header {
     font-weight: bold;
 }
 
+/* Entrées Section */
 .entrees-section {
     margin-top: 50px;
     text-align: left;
