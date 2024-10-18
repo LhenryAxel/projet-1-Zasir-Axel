@@ -130,7 +130,6 @@ body.carte-page {
     position: relative;
 }
 
-/* Hero image styling (decorative) */
 .hero-image::before {
     content: '';
     position: absolute;
@@ -160,6 +159,7 @@ body.carte-page {
 }
 
 /* Menu Page Styling */
+/* General Styles for the Menu Page */
 .menu-page {
     padding: 50px;
     text-align: center;
@@ -172,17 +172,21 @@ body.carte-page {
     margin-bottom: 40px;
 }
 
+/* Menu Icons Section */
 .menu-icons {
     display: flex;
     justify-content: center;
     gap: 60px;
     margin-bottom: 45px;
     margin-top: 30px;
+    flex-wrap: wrap; /* Allow the icons to wrap on smaller screens */
 }
 
 .menu-icons .icon {
     text-align: center;
     cursor: pointer;
+    flex: 1 1 150px; /* Allow icons to shrink or grow */
+    min-width: 100px; /* Set a minimum width for the icons */
 }
 
 .menu-icons .icon img {
@@ -195,15 +199,22 @@ body.carte-page {
     font-weight: bold;
 }
 
+/* Menu Items Section */
 .menu-items {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    margin: 0 auto; /* Center the items */
+    padding: 0 20px; /* Add padding to the left and right */
+    max-width: 1200px; /* Set a maximum width to control content layout */
 }
 
 .menu-item {
     text-align: center;
+    flex: 1 1 150px;
+    min-width: 150px;
+    max-width: 250px;
 }
 
 .menu-item img {
@@ -227,12 +238,94 @@ body.carte-page {
     font-weight: bold;
 }
 
-/* Footer Styling */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-page {
+        padding: 30px; /* Reduce padding on smaller screens */
+    }
+
+    .menu-page h1 {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    .menu-icons {
+        gap: 30px; /* Reduce the gap between icons */
+    }
+
+    .menu-icons .icon img {
+        width: 60px; /* Reduce icon size */
+    }
+
+    .menu-icons .icon span {
+        font-size: 0.9em; /* Reduce text size */
+    }
+
+    .menu-items {
+        gap: 30px; /* Reduce gap between items */
+    }
+
+    .menu-item img {
+        width: 120px; /* Reduce image size */
+    }
+
+    .menu-item span {
+        font-size: 1em; /* Reduce font size */
+    }
+
+    .price {
+        font-size: 0.9em; /* Adjust price text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-page {
+        padding: 20px; /* Further reduce padding for very small screens */
+    }
+
+    .menu-page h1 {
+        font-size: 1.8em; /* Further reduce heading size */
+    }
+
+    .menu-icons {
+        gap: 20px; /* Further reduce gap */
+    }
+
+    .menu-icons .icon img {
+        width: 50px; /* Further reduce icon size */
+    }
+
+    .menu-icons .icon span {
+        font-size: 0.8em; /* Further reduce text size */
+    }
+
+    .menu-items {
+        gap: 20px; /* Further reduce gap */
+    }
+
+    .menu-item {
+        min-width: 100px; /* Set a smaller minimum width */
+    }
+
+    .menu-item img {
+        width: 100px; /* Further reduce image size */
+    }
+
+    .menu-item span {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .price {
+        font-size: 0.8em; /* Adjust price text size */
+    }
+}
+
+
 /* Footer Styling */
 .footer {
     background-color: #0b0b0b;
     color: #ffffff;
-    padding: 20px 0; /* Reduced padding */
+    padding: 20px 0; 
     text-align: center;
     font-family: 'Poppins', sans-serif;
     margin-top: 40px; 
@@ -240,20 +333,20 @@ body.carte-page {
 
 .footer-content {
     display: flex;
-    justify-content: center; /* Center content */
+    justify-content: center; 
     align-items: center;
-    padding: 0 20px; /* Smaller padding */
+    padding: 0 20px; 
     flex-wrap: wrap;
 }
 
 .footer-logo img {
-    max-width: 80px; /* Smaller logo */
-    margin-right: 20px; /* Added space between logo and text */
+    max-width: 80px; 
+    margin-right: 20px; 
 }
 
 .footer-text p {
     margin: 5px 0;
-    font-size: 0.9rem; /* Reduced text size */
+    font-size: 0.9rem;
 }
 
 .footer-text a {
@@ -264,15 +357,14 @@ body.carte-page {
 .footer-bottom {
     background-color: #141414;
     padding: 10px 0;
-    margin-top: 15px; /* Less margin */
+    margin-top: 15px;
 }
 
 .footer-bottom p {
     margin: 0;
-    font-size: 0.8rem; /* Smaller footer text */
+    font-size: 0.8rem;
 }
 
-/* Restaurant Section Styling */
 .restaurant-section {
     padding: 50px 0;
 }
@@ -296,7 +388,7 @@ body.carte-page {
 
 .restaurant-section h3 {
     font-size: 1.5em;
-    color: #f5b30a; /* Matches the theme */
+    color: #f5b30a; 
     font-weight: bold;
     margin-top: -10px;
 }

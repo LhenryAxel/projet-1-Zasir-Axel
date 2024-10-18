@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Tarmac Pizza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header Styles */
+        .header-black {
+            background-color: #0b0b0b;
+        }
+
+        /* Main Section to take available height */
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0b0b0b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .footer-logo img {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #f5b30a;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="carte-page">
+    <!-- Header -->
+    <header class="header-black">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="Logo Tarmac" width="115">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-home" href="home.html"><i class="fas fa-home"></i> Accueil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="carte.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Carte
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" data-category="entrees">Entrées</a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-category="pizzas">Pizzas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="carte.html" data-category="italiennes">Italiennes</a></li>
+                                        <li><a class="dropdown-item" href="carte.html" data-category="savoureuses">Savoureuses</a></li>
+                                        <li><a class="dropdown-item" href="carte.html" data-category="rustiques">Rustiques</a></li>
+                                        <li><a class="dropdown-item" href="carte.html" data-category="vegetariennes">Végétariennes</a></li>
+                                        <li><a class="dropdown-item" href="carte.html" data-category="exotiques">Exotiques</a></li>
+                                        <li><a class="dropdown-item" href="carte.html" data-category="oceanes">Océanes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="carte.html" data-category="salades">Salades</a></li>
+                                <li><a class="dropdown-item" href="carte.html" data-category="desserts">Desserts</a></li>
+                            </ul>
+                        </li>
+                        <!-- Restaurants Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="restaurants.html" id="navbarDropdownRestaurants" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Restaurants
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownRestaurants">
+                                <li><a class="dropdown-item" href="restaurants.html">Amiens Centre-ville</a></li>
+                                <li><a class="dropdown-item" href="restaurants.html">Amiens Saint-Leu</a></li>
+                                <li><a class="dropdown-item" href="restaurants.html">Amiens Ouest</a></li>
+                                <li><a class="dropdown-item" href="restaurants.html">Compiègne</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="nav-contact" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content (Leave Empty for Now) -->
+    <main>
+        <!-- Empty body for you to add content later -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Tarmac Logo" width="100">
+            </div>
+            <p>« POUR VOTRE SANTÉ, MANGEZ AU MOINS 5 FRUITS ET LÉGUMES PAR JOUR »</p>
+            <a href="http://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
