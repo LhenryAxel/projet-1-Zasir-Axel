@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Carte - Tarmac Pizza</title>
+    <title>Restaurants - Tarmac Pizza</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<body class="carte-page">
+<body>
+
+    <!-- Header -->
     <header class="header-black">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -22,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="home.html"><i class="fas fa-home"></i> Accueil</a>
+                            <a class="nav-link" aria-current="page" href="home.html"><i class="fas fa-home"></i> Accueil</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="carte.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,16 +48,8 @@
                             </ul>
                         </li>
                         <!-- Restaurants Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="restaurants.html" id="navbarDropdownRestaurants" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Restaurants
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownRestaurants">
-                                <li><a class="dropdown-item" href="restaurant.html">Amiens Centre-ville</a></li>
-                                <li><a class="dropdown-item" href="restaurant.html">Amiens Saint-Leu</a></li>
-                                <li><a class="dropdown-item" href="restaurant.html">Amiens Ouest</a></li>
-                                <li><a class="dropdown-item" href="restaurant.html">Compiègne</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="restaurants.html">Restaurants</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -64,54 +58,46 @@
                 </div>
             </div>
         </nav>
-    </header>  
+    </header>
 
-    <div class="menu-icons">
-        <div class="icon" data-category="all">
-            <img src="img/menu.png" alt="La Carte">
-            <span>LA CARTE</span>
+    <!-- Main Section for Restaurant -->
+    <section class="restaurant-section">
+        <div class="container text-center">
+            <h1>Trouver une pizzeria Tarmac Pizza</h1>
+            <p>Trouvez la <strong>pizzeria Tarmac Pizza</strong> la plus proche de chez vous parmi nos restaurants. Commandez vos <a href="carte.html">pizzas préférées</a> ou votre <a href="carte.html">salade équilibrée</a> pour votre pause repas ou votre soirée en famille, entre amis ou en couple.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/amiens-centre.webp" alt="Amiens Centre" class="img-fluid">
+                    <h3>Amiens Centre</h3>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/amiens-saint-leu.webp" alt="Amiens Saint-Leu" class="img-fluid">
+                    <h3>Amiens Saint-Leu</h3>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/compiegne.webp" alt="Compiègne" class="img-fluid">
+                    <h3>Compiègne</h3>
+                </div>
+            </div>
         </div>
-        <div class="icon" data-category="entrees">
-            <img src="img/menu-entrees.svg" alt="Entrées">
-            <span>ENTRÉES</span>
-        </div>
-        <div class="icon" data-category="pizzas">
-            <img src="img/menu-pizzas.svg" alt="Pizzas">
-            <span>PIZZAS</span>
-        </div>
-        <div class="icon" data-category="salades">
-            <img src="img/menu-salades.svg" alt="Salades">
-            <span>SALADES</span>
-        </div>
-        <div class="icon" data-category="desserts">
-            <img src="img/menu-desserts.svg" alt="Desserts">
-            <span>DESSERTS</span>
-        </div>
-    </div>
-    
-    <div id="menu-items" class="menu-items">
-        <!-- Menu items will be displayed here dynamically -->
-    </div>
-    
+    </section>
 
-    <!-- Bootstrap JS -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo Tarmac Pizza" width="80">
+            </div>
+            <div class="footer-text">
+                <p>« POUR VOTRE SANTÉ, MANGEZ AU MOINS 5 FRUITS ET LÉGUMES PAR JOUR »</p>
+                <p><a href="https://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tarmac Pizza | All Rights Reserved</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="script.js"></script>
-
 </body>
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="img/logo.png" alt="Logo Tarmac Pizza" width="80">
-        </div>
-        <div class="footer-text">
-            <p>« POUR VOTRE SANTÉ, MANGEZ AU MOINS 5 FRUITS ET LÉGUMES PAR JOUR »</p>
-            <p><a href="https://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Tarmac Pizza | All Rights Reserved</p>
-    </div>
-</footer>
 </html>
